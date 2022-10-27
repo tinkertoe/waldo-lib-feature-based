@@ -1,0 +1,35 @@
+{
+  "name": "waldo-lib-feature-based",
+  "version": "1.0.0",
+  "author": "tinkertoe",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "source": "src/index.ts",
+  "main": "dist/main.cjs",
+  "module": "dist/module.mjs",
+  "types": "dist/types.d.ts",
+  "dependencies": {
+    "twgl.js": "^4.24.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-typescript": "^7.18.6",
+    "@parcel/packager-ts": "2.7.0",
+    "@parcel/transformer-typescript-types": "2.7.0",
+    "@types/gl": "^4.1.1",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^18.7.18",
+    "assemblyscript": "^0.21.3",
+    "fast-png": "^6.1.0",
+    "gl": "^5.0.3",
+    "jest": "^29.0.3",
+    "parcel": "^2.7.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "asbuild": "asc --config src/wasm/asconfig.json",
+    "build": "npm run asbuild && parcel build",
+    "test": "jest"
+  }
+}

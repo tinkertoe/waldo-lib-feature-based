@@ -1,0 +1,21 @@
+{
+  "entries": [
+    "./src/index.ts"
+  ],
+  "options": {
+    "bindings": "raw",
+    "outFile": "./build/index.wasm"
+  },
+  "targets": {
+    "debug": {
+      "debug": true,
+      "sourceMap": true
+    },
+    "release": {
+      "optimize": true,
+      "optimizeLevel": 3,
+      "shrinkLevel": 3,
+      "noAssert": true
+    }
+  }
+}
